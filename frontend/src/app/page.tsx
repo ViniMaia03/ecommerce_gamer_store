@@ -4,11 +4,10 @@ import { produtos } from "@/core";
 export default function Home() {
   return (
     <>
-      <div className="flex gap-5 flex-wrap">
-        <ProdutoItem produto = { produtos[0] } />
-        <ProdutoItem produto = { produtos[1] } />
-        <ProdutoItem produto = { produtos[2] } />
-        <ProdutoItem produto = { produtos[3] } />
+      <div className="grid grid-cols-4 gap-5 container">
+        {produtos.map((produto) => (
+          <ProdutoItem key={produto.id} produto = {produto} />
+        ))}
       </div>
     </>
   )

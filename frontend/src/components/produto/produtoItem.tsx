@@ -1,3 +1,5 @@
+'use client'
+
 import { Produto, produtos } from "@/core"
 import Link from "next/link"
 import Image from "next/image"
@@ -34,15 +36,19 @@ export default function ProdutoItem(props: ProdutoItemProps) {
 
             <div className="flex flex-col">
                 <span className="text-sm text-gray-400 line-through">
-                    De: {props.produto.precoBase}
+                    De: R${props.produto.precoBase}
                 </span>
 
                 <span className="text-xl font-semibold text-emerald-400">
-                    Por: {props.produto.precoPromocional}
+                    Por: R${props.produto.precoPromocional}
                 </span>
             </div>
 
-            <button className="flex bg-violet-700 rounded-full justify-center h-8 gap-2 items-center hover:border-2 border-emerald-500 mt-5">
+            <button className="flex bg-violet-700 rounded-full justify-center h-8 gap-2 items-center hover:border-2 border-emerald-500 mt-5" 
+                    onClick={(e: any) => {
+                        e.preventDefault()
+                        console.log("Adicionar ao Carrinho")
+                    }}>
                 <IconShoppingCartPlus size={20} />
 
                 <span>
