@@ -9,8 +9,6 @@ export default function Home() {
         <ProdutoItem produto = { produtos[1] } />
         <ProdutoItem produto = { produtos[2] } />
         <ProdutoItem produto = { produtos[3] } />
-        <ProdutoItem produto = { produtos[4] } />
-        <ProdutoItem produto = { produtos[5] } />
       </div>
     </>
   )
