@@ -1,7 +1,7 @@
 import Produto from "../produto/produto"
 
 const produtos: Produto[] = [{
-    id: 1,
+        id: 1,
         nome: 'Notebook Gamer Acer Nitro 5',
         descricao:
             'O Acer Nitro 5 é um notebook gamer poderoso, ideal para jogos pesados e multitarefas.',
